@@ -177,6 +177,8 @@ body {
   width: 100%;
   max-width: 800px;
   z-index: 1000;
+  display: flex;
+  align-items: center;
 }
 #menu ul,
 #menu li {
@@ -187,13 +189,14 @@ body {
 }
 #menu ul {
   width: 100%;
-  text-align: left;
   text-align: center;
 }
+
 #menu li {
   display: inline-block;
   position: relative;
 }
+
 #menu a {
   display: block;
   line-height: 45px;
@@ -305,6 +308,12 @@ body {
   }
 }
 
+.top-left-logo {
+  max-height: 40px; /* Adjust the height as needed */
+  margin-right: -55px;
+  position: none; /* Space between the logo and the menu items */
+}
+
 /* Steaks Columns */
 .column {
   column-count: 2;
@@ -332,18 +341,46 @@ body {
   margin: 10px 0;
 }
 
-.column ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  display: block;
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bolder;
-  color: #470063;
+.button {
+  width: fit-content;
+  display: flex;
+  padding: 0.8em 1.1em;
+  gap: 0.4rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      15deg,
+      #880088,
+      #aa2068,
+      #cc3f47,
+      #de6f3d,
+      #f09f33,
+      #de6f3d,
+      #cc3f47,
+      #aa2068,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background 0.3s ease;
+  color: #fff;
 }
 
-.column ul li a:hover {
-  color: #ffffff; /* Change text color to white on hover */
+.button:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+
+.button:hover img {
+  fill: #fff;
+}
+
+.button img {
+  width: 23px;
+  fill: #f09f33;
+  transition: 0.3s ease;
 }
