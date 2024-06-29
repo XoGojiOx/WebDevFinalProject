@@ -182,7 +182,7 @@ body {
 }
 #menu ul,
 #menu li {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -195,20 +195,19 @@ body {
 #menu li {
   display: inline-block;
   position: relative;
+  margin: 0 10px; /* Adjusting my margin as i need */
 }
 
 #menu a {
   display: block;
-  line-height: 45px;
-  padding: 0 14px;
+  line-height: 45px; /* Adjusting my button height */
+  padding: 0 14px; /* Adjusting my button padding */
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-#menu a.dropdown-arrow:after {
-  content: "\25BE";
-  margin-left: 5px;
-}
+
 #menu li a:hover {
   color: #f82ad6;
   background: #ffffff;
@@ -342,7 +341,7 @@ body {
 }
 
 .button {
-  width: fit-content;
+  width: 160px;
   display: flex;
   padding: 0.8em 1.1em;
   gap: 0.4rem;
